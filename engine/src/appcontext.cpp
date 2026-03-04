@@ -140,6 +140,7 @@ void AppContext::readOrCreateUserConf(const std::string& userConfFolder) {
         userConf.add("language", languageID);
         userConf.add("save_data_dir", saveDataDir);
         userConf.add("sound_volume", soundVolume_);
+        userConf.add("scale_factor", scaleFactor_);
 
         if (!updateUserConf(userConf, userConfFullpath)) {
             throw InitializationFailedException(std::format("Failed to update user configuration in folder: {}", userConfFullpath.string()));
